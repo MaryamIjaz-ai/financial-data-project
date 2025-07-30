@@ -2,35 +2,6 @@
 
 This project is designed to automate the parsing, normalization, and storage of complex financial Excel statements. It supports both structured and semi-structured Excel files such as bank statements and ledger entries.
 
----
-
-## 📁 Project Structure
-
-financial-data-analyzer-updated/
-│
-├── main.py                          # Main script to run the entire workflow
-│
-├── README.md                        # Project description, usage, structure, etc.
-│
-├── data/
-│   ├── KH_Bank.XLSX                 # Sample bank statement file
-│   └── Customer_Ledger_Entries_FULL.xlsx  # Sample ledger entry file
-│
-├── src/
-│   ├── core/                        # Core logic and modules
-│   │   ├── __init__.py
-│   │   ├── excel_processor.py       # Reads and extracts data from Excel
-│   │   ├── format_parser.py         # Normalizes amount and date formats
-│   │   ├── data_storage.py          # Stores data in SQLite and supports queries
-│   │   └── type_detector.py         # Detects financial data types in columns
-│
-│   └── tests/                       # Unit test files
-│       ├── __init__.py
-│       ├── test_format_parser.py    # Tests for FormatParser (amount/date parsing)
-│       └── test_type_detector.py    # Tests for DataTypeDetector
-│
-
-
 
 ## ✅ Features
 
