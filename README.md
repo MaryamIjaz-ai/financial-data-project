@@ -8,25 +8,29 @@ This project is designed to automate the parsing, normalization, and storage of 
 
 financial-data-analyzer-updated/
 │
-├── main.py # Main execution file for loading, parsing, and querying data
+├── main.py                          # Main script to run the entire workflow
+│
+├── README.md                        # Project description, usage, structure, etc.
+│
 ├── data/
-│ ├── Customer_Ledger_Entries_FULL.xlsx
-│ └── KH_Bank.XLSX
+│   ├── KH_Bank.XLSX                 # Sample bank statement file
+│   └── Customer_Ledger_Entries_FULL.xlsx  # Sample ledger entry file
 │
 ├── src/
-│ ├── core/
-│ │ ├── init.py
-│ │ ├── excel_processor.py # Loads and extracts Excel sheets
-│ │ ├── format_parser.py # Normalizes dates and amounts
-│ │ ├── data_storage.py # Stores data in SQLite in-memory DB and provides query methods
-│ │ └── type_detector.py # Detects column types (amount, date, etc.)
-│ │
-│ └── tests/
-│ ├── init.py
-│ ├── test_format_parser.py # Unit tests for amount/date parsing
-│ └── test_type_detector.py # Unit tests for type detection
+│   ├── core/                        # Core logic and modules
+│   │   ├── __init__.py
+│   │   ├── excel_processor.py       # Reads and extracts data from Excel
+│   │   ├── format_parser.py         # Normalizes amount and date formats
+│   │   ├── data_storage.py          # Stores data in SQLite and supports queries
+│   │   └── type_detector.py         # Detects financial data types in columns
 │
-└── README.md
+│   └── tests/                       # Unit test files
+│       ├── __init__.py
+│       ├── test_format_parser.py    # Tests for FormatParser (amount/date parsing)
+│       └── test_type_detector.py    # Tests for DataTypeDetector
+│
+
+
 
 ## ✅ Features
 
